@@ -4,7 +4,7 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
     Temps = (input.runningTime() - t1) / 1000
     Distance = receivedNumber / 20 * 15.7 / 100
-    serial.writeNumbers([Temps, Math.round(Distance * 100) / 100])
+    serial.writeNumbers([Math.round(Distance * 100) / 100, Temps])
     led.toggle(0, 0)
     Debut = 3
 })
